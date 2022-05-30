@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="myFunction()">
+    <button>hello</button>
+    <input type="text" content="hello">
+    <div class="root"></div>
+    <div class="root_1">click here</div>
+    <div class="root_2">hello</div>
+    <iframe src="https://soha.vn/bao-moi.html"  height="500px" width="1000px"></iframe>
+</body>
+<script>
+    function myFunction() {
+        const element = document.activeElement.tagName // activeElement.tagName
+        document.querySelector('.root').innerHTML = element
+    }
+    document.addEventListener('mousemove', function myFunction() {
+        document.querySelector('.root_2').style.color = 'red' 
+        
+    })
+    document.addEventListener('mouseout', function myFunction() { // mouseout
+        document.querySelector('.root_2').style.color = 'yellow'
+        
+    })
+</script>
+</html>
